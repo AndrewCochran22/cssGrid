@@ -1,0 +1,38 @@
+.grid {
+    display: grid;
+    /* fractional units based on remaining space if you use px it will stay px the whole time */
+    grid-template-columns: 2fr 300px 1fr;
+    grid-auto-rows: 200px 100px;
+    /* row-gap: 10px;
+    column-gap: 10px; 
+    first in gap is row 2nd is column*/
+    gap: 10px;
+}
+
+.grid > div {
+    border: 1px solid blue;
+    padding: 5px;
+    background-color: pink;
+}
+
+div.item1 {
+    background-color: lightblue;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+div.item2 {
+    background-color: lightgreen;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+div.item3 {
+    background-color: lightsalmon;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
